@@ -30,12 +30,4 @@ subprojects {
     tasks.withType(JavaCompile).configureEach {
         it.options.release = 21
     }
-    loom {
-        splitEnvironmentSourceSets()
-        runs {
-            server {
-                vmArgs "-Dnet.fabricmc.loader.debug.loadLate=true", "--enable-native-access=ALL-UNNAMED"
-            }
-        }
-    }
 }
