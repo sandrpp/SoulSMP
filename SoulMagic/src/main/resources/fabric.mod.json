@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "soulmagic",
+  "version": "${version}",
+
+  "name": "SoulMagic",
+  "description": "SoulMagic",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/soulmagic/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": ["de.soulsmp.soulmagic.client.SoulmagicDataGenerator"],
+    "main": ["de.soulsmp.soulmagic.Soulmagic"]
+  },
+
+  "mixins": [
+    "soulmagic.mixins.json"
+    ,{
+      "config": "soulmagic.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

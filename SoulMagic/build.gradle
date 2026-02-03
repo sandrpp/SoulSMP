@@ -1,0 +1,2 @@
+base { archivesName = "soulmagic" }
+dependencies { implementation project(path: ":SoulCore", configuration: "namedElements") }

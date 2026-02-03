@@ -1,0 +1,9 @@
+base { archivesName = "soulcore" }
+
+loom {
+    mods {
+        "soulcore" {
+            sourceSet sourceSets.main
+        }
+    }
+}

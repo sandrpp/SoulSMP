@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "serverhelper",
+  "version": "${version}",
+
+  "name": "ServerHelper",
+  "description": "ServerHelper for running a test server",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/serverhelper/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": ["de.soulsmp.serverhelper.client.ServerhelperDataGenerator"],
+    "main": ["de.soulsmp.serverhelper.Serverhelper"]
+  },
+
+  "mixins": [
+    "serverhelper.mixins.json"
+    ,{
+      "config": "serverhelper.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

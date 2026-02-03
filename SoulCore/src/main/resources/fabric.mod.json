@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "soulcore",
+  "version": "${version}",
+
+  "name": "SoulCore",
+  "description": "SoulCore",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/soulcore/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": ["de.soulsmp.soulcore.client.SoulcoreDataGenerator"],
+    "main": ["de.soulsmp.soulcore.Soulcore"]
+  },
+
+  "mixins": [
+    "soulcore.mixins.json"
+    ,{
+      "config": "soulcore.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

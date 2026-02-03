@@ -1,0 +1,17 @@
+base { archivesName = "serverhelper" }
+
+dependencies {
+    rootProject.subprojects.each { subproject ->
+        if (subproject.name != project.name) {
+            implementation project(path: ":${subproject.name}", configuration: "namedElements")
+        }
+    }
+}
+
+loom {
+    mods {
+        "serverhelper" {
+            sourceSet sourceSets.main
+        }
+    }
+}

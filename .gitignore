@@ -1,0 +1,23 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+.idea_modules/
+
+# Minecraft Run-Verzeichnis (Wichtig!)
+run/
+**/run/
+
+# Java / Betriebssystem
+*.class
+*.log
+.DS_Store
+Thumbs.db
+
+# Geheimnisse (Falls du Tokens in Dateien speicherst)
+gradle.properties.local
+*.private
