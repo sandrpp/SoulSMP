@@ -8,16 +8,16 @@ build/
 out/
 .idea_modules/
 
-# Minecraft Run-Verzeichnis (Wichtig!)
+# Minecraft Run-Directories
 run/
 **/run/
 
-# Java / Betriebssystem
+# Java / OS generated files
 *.class
 *.log
 .DS_Store
 Thumbs.db
 
-# Geheimnisse (Falls du Tokens in Dateien speicherst)
+# Secrets
 gradle.properties.local
 *.private
