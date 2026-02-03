@@ -1,0 +1,14 @@
+package de.soulsmp.soulmagic;
+import net.fabricmc.api.ModInitializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SoulMagic implements ModInitializer {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger("soulmagic");
+
+    @Override
+    public void onInitialize() {
+        LOGGER.info("SoulMagic initialized!");
+    }
+}

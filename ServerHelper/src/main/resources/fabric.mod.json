@@ -13,16 +13,13 @@
 
   "environment": "server",
   "entrypoints": {
-    "fabric-datagen": ["de.soulsmp.serverhelper.client.ServerhelperDataGenerator"],
-    "main": ["de.soulsmp.serverhelper.Serverhelper"]
+    "main": [
+      "de.soulsmp.serverhelper.ServerHelper"
+    ]
   },
 
   "mixins": [
     "serverhelper.mixins.json"
-    ,{
-      "config": "serverhelper.client.mixins.json",
-      "environment": "client"
-    }
   ],
 
   "depends": {

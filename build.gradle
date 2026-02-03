@@ -30,4 +30,10 @@ subprojects {
     tasks.withType(JavaCompile).configureEach {
         it.options.release = 21
     }
+
+    tasks.withType(Jar).configureEach {
+        from(rootProject.file("LICENSE.txt")) {
+            rename { "LICENSE" }
+        }
+    }
 }
