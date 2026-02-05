@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 public class SoulCore implements ModInitializer {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger("soulcore");
+    public static final Logger LOGGER = LoggerFactory.getLogger("SoulCore");
 
     @Override
     public void onInitialize() {

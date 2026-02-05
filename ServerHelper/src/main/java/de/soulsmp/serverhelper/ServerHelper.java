@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 public class ServerHelper implements ModInitializer {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger("serverhelper");
+    public static final Logger LOGGER = LoggerFactory.getLogger("ServerHelper");
 
     @Override
     public void onInitialize() {
