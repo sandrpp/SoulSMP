@@ -1,4 +1,4 @@
-package de.soulsmp.serverhelper;
+package de.soulsmp.soulmods.serverhelper;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;

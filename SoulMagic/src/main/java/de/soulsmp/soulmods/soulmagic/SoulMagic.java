@@ -1,4 +1,4 @@
-package de.soulsmp.soulmagic;
+package de.soulsmp.soulmods.soulmagic;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

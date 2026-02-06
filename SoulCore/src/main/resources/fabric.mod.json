@@ -14,7 +14,7 @@
   "environment": "server",
   "entrypoints": {
     "main": [
-      "de.soulsmp.soulcore.SoulCore"
+      "de.soulsmp.soulmods.soulcore.SoulCore"
     ]
   },
 
