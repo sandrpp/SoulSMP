@@ -33,7 +33,6 @@ jobs:
           files: |
             SoulCore/build/libs/soulcore-*.jar
             SoulMagic/build/libs/soulmagic-*.jar
-            ServerHelper/build/libs/server-helper-*.jar
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
           draft: false
