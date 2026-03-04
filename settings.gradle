@@ -8,7 +8,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'SoulSMP'
+rootProject.name = 'SoulMods'
 
 include 'SoulCore'
 include 'SoulMagic'

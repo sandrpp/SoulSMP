@@ -1,11 +1,16 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id 'fabric-loom' version '1.15-SNAPSHOT' apply false
+    id 'org.jetbrains.kotlin.jvm' version '2.3.0' apply false
     id 'maven-publish'
 }
 
 subprojects {
     apply plugin: 'fabric-loom'
     apply plugin: 'maven-publish'
+    apply plugin: 'org.jetbrains.kotlin.jvm'
 
     version = rootProject.mod_version
     group = rootProject.maven_group
@@ -15,6 +20,7 @@ subprojects {
         mappings "net.fabricmc:yarn:${rootProject.yarn_mappings}:v2"
         modImplementation "net.fabricmc:fabric-loader:${rootProject.loader_version}"
         modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_version}"
+        modImplementation "net.fabricmc:fabric-language-kotlin:${rootProject.fabric_language_kotlin_version}"
     }
 
     processResources {
@@ -29,6 +35,11 @@ subprojects {
 
     tasks.withType(JavaCompile).configureEach {
         it.options.release = 21
+    }
+    tasks.withType(KotlinCompile).configureEach {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+        }
     }
 
     tasks.withType(Jar).configureEach {
